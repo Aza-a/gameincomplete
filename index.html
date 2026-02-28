@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Meadow Where Secrets Bloom</title>
+    <meta name="description"
+        content="A gentle fairytale about kindness, connection, and the courage to believe you matter.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <div id="ui-layer">
+            <!-- Stamina Bar -->
+            <div id="stamina-bar-container" style="display: none;">
+                <div id="stamina-bar"></div>
+                <div id="stamina-label">Stamina</div>
+            </div>
+
+            <!-- Bond Meter -->
+            <div id="bond-meter-container">
+                <div id="bond-meter"></div>
+                <div id="bond-label">♥ Bond</div>
+            </div>
+
+            <!-- Fear Meter -->
+            <div id="fear-meter-container" style="display: none;">
+                <div id="fear-meter"></div>
+            </div>
+
+            <!-- Dialogue Box -->
+            <div id="dialogue-box" style="display: none;">
+                <div id="portrait-left" class="portrait"></div>
+                <div id="dialogue-content">
+                    <p id="speaker-name"></p>
+                    <p id="dialogue-text"></p>
+                </div>
+                <div id="portrait-right" class="portrait"></div>
+                <div id="continue-indicator">▼</div>
+            </div>
+
+            <!-- Dialogue Choices -->
+            <div id="dialogue-choices" style="display: none;"></div>
+
+            <!-- Tutorial Overlay -->
+            <div id="tutorial-overlay" style="display: none;">
+                <div class="tutorial-content">
+                    <p><span class="key">WASD</span> Move</p>
+                    <p><span class="key">SPACE</span> Jump</p>
+                    <p><span class="key">E</span> Interact</p>
+                </div>
+            </div>
+
+            <!-- Achievement Popup -->
+            <div id="achievement-popup">
+                <span class="achievement-icon">★</span>
+                <span class="achievement-title"></span>
+            </div>
+
+            <!-- Main Menu -->
+            <div id="main-menu">
+                <h1>The Meadow Where Secrets Bloom</h1>
+                <p class="subtitle">Even small hands can build something strong.</p>
+                <button id="start-btn">Begin Journey</button>
+                <p id="replay-hint"
+                    style="display: none; margin-top: 1rem; color: #d8bfd8; font-style: italic; font-size: 0.9rem;">✦
+                    Replay mode available</p>
+            </div>
+
+            <!-- Pause Menu -->
+            <div id="pause-menu" style="display: none;">
+                <h2>Paused</h2>
+                <div id="achievement-list"></div>
+                <button id="resume-btn">Resume</button>
+                <button id="save-quit-btn">Save & Quit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts (order matters) -->
+    <script src="js/systems.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/scenes.js"></script>
+    <script src="js/scenes_ext.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
